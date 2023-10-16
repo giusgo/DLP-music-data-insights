@@ -52,3 +52,5 @@ docker-compose up -d
 # If using docker-compose-plugin
 docker compose up -d
 ```
+
+Open your web browser and go to `http://ip_address:5044`
