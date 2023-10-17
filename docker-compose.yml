@@ -11,8 +11,11 @@ services:
       - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
     ports:
       - 5432:5432
+
   api:
-    build: .
+    build:
+      context: ./Spotify
+      dockerfile: Dockerfile
     ports:
       - 3000:3000
     volumes:
@@ -20,3 +23,9 @@ services:
     depends_on:
       - postgres
 
+  web:
+    build:
+      context: ./DLP-frontend
+      dockerfile: Dockerfile
+    ports:
+      - 5044:5044
