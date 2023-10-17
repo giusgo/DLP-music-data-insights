@@ -23,7 +23,7 @@ services:
     depends_on:
       - postgres
 
-  web:
+  dlp-frontend:
     build:
       context: ./DLP-frontend
       dockerfile: Dockerfile

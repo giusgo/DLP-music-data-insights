@@ -32,6 +32,12 @@ Create a folder to keep both repositories and build the application:
 mkdir 'DLP-music-data-insights' && cd 'DLP-music-data-insights'
 ```
 
+Download the data from Kaggle [here](https://www.kaggle.com/datasets/mcfurland/10-m-beatport-tracks-spotify-audio-features) and place all the csv files under `csv_files` folder:
+
+```bash
+mkdir 'csv_files'
+```
+
 Clone both repositories (front-end and back-end):
 
 ```bash
@@ -53,4 +59,6 @@ docker-compose up -d
 docker compose up -d
 ```
 
-Open your web browser and go to `http://ip_address:5044`
+**NOTE:** Since all the data needs to be migrated from `.csv` format to a database, you need to wait a long time before using the webapp. 
+
+Open your web browser and go to `http://ip_address:5044`. Where `ip_address` may be localhost or the IP address of the server you decide to host the app.
